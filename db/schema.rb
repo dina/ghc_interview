@@ -13,11 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20151005053020) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "questions", force: :cascade do |t|
-    t.string "name",       limit: 255
-    t.text   "content",    limit: 65535
-    t.text   "test_cases", limit: 65535
-    t.string "format",     limit: 255
+    t.string "name"
+    t.text   "content"
+    t.text   "test_cases"
+    t.string "format"
   end
 
 end
