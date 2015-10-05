@@ -1,0 +1,29 @@
+<h2><%= @question.name %></h2>
+<p><%= @question.content %></p>
+
+<h3>Test Cases:</h3>
+
+<% if @question.format == 'bullet' %>
+
+  <% @question.test_cases.each do |input, output| %>
+    <ul>
+      <li><b>Input</b>&nbsp;<%= input %></li>
+      <li><b>Output</b>&nbsp;<%= output %></li>
+    </ul>
+  <% end %>
+
+<% elsif @question.format == 'raw' %>
+
+  <b>Input</b><br/>
+  <% @question.test_cases.first.each do |i| %>
+    <%= i %><br/>
+  <% end %>
+
+  <br/>
+
+  <b>Output</b><br/>
+  <% @question.test_cases.last.each do |o| %>
+    <%= o %><br/>
+  <% end %>
+
+<% end %>

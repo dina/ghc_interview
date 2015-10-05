@@ -1,0 +1,21 @@
+common: &common
+  adapter:  mysql2
+  encoding:  utf8mb4
+  pool:     5
+  timeout:  5000
+
+development:
+  <<: *common
+  database: ghc_interview_development
+
+test:
+  <<: *common
+  database: ghc_interview_test
+
+staging:
+  <<: *common
+  database: ghc_interview_staging
+
+production:
+  <<: *common
+  database: ghc_interview_production
