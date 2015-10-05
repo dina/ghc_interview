@@ -85,3 +85,12 @@ test_cases = [
 format = :raw
 q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
 
+
+name = "Hello Square"
+content = "The Rules: (1) For multiples of 3, print \"Hello\" instead of the number. (2) For multiples of 5, print \"Square\" instead of the number. (3) For multiples of 3 and 5, print \"HelloSquare\" instead of the number."
+test_cases = [
+  [20],
+  [1, 2, "Hello", 4, "Square", "Hello", 7, 8, "Hello", "Square", 11, "Hello", 13, 14, "HelloSquare", 16, 17, "Hello", 19, "Square"]
+]
+format = :raw
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
