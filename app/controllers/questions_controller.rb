@@ -10,6 +10,6 @@ class QuestionsController < ApplicationController
 
   def show
     @questions = Question.all
-    @question = Question.index(params[:id])
+    @question = Question.number(params[:id])
   end
 end

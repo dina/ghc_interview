@@ -2,7 +2,7 @@ name = "Palindrome"
 content = "Detect whether a string is a palindrome."
 test_cases = [["\"hello world\"", false], ["\"taco cat\"", true], ["\"racecar\"", true]]
 format = :bullet
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 1)
 
 
 name = "Line Items"
@@ -25,7 +25,7 @@ test_cases = [
   ]
 ]
 format = :raw
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 2)
 
 
 name = "Reverse String"
@@ -36,7 +36,7 @@ test_cases = [
   ["\"I heart coding!\"", "\"!gnidoc traeh I\""]
 ]
 format = :bullet
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 3)
 
 
 name = "Fibonacci Sequence"
@@ -49,7 +49,7 @@ test_cases = [
   ["10", "55"],
 ]
 format = :bullet
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 4)
 
 
 name = "Factorial"
@@ -62,7 +62,7 @@ test_cases = [
   ["10", "3628800"],
 ]
 format = :bullet
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 5)
 
 
 name = "Unsorted Array"
@@ -73,7 +73,7 @@ test_cases = [
   ["[90, 23, 64]", "64"]
 ]
 format = :bullet
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 6)
 
 
 name = "Merge Arrays"
@@ -83,7 +83,7 @@ test_cases = [
   ["[1, 4, 5, 7, 8, 10, 10, 11, 15, 45]"]
 ]
 format = :raw
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 7)
 
 
 name = "Hello Square"
@@ -93,4 +93,4 @@ test_cases = [
   [1, 2, "Hello", 4, "Square", "Hello", 7, 8, "Hello", "Square", 11, "Hello", 13, 14, "HelloSquare", 16, 17, "Hello", 19, "Square"]
 ]
 format = :raw
-q = Question.create(name: name, content: content, test_cases: test_cases, format: format)
+q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 8)

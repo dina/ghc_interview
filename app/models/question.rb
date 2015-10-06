@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
     Question.find_by_number(i)
   end
 
-  def self.index(i)
+  def self.number(i)
     Question.find_by_number(i)
   end
 end
