@@ -1,11 +1,15 @@
 class QuestionsController < ApplicationController
 
+  before_action :authenticate_admin!
+
   def index
+    @questions = Question.all
     @question = Question.random
+    render :show
   end
 
   def show
-    @question = Question.index(params[:index])
-    render :index
+    @questions = Question.all
+    @question = Question.index(params[:id])
   end
 end

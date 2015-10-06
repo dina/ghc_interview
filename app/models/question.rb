@@ -3,11 +3,11 @@ class Question < ActiveRecord::Base
   serialize :test_cases, JSON
 
   def self.random
-    i = Random.rand(count)
-    Question.all[i] # lol
+    i = Random.rand(count) + 1
+    Question.find_by_number(i)
   end
 
   def self.index(i)
-    Question.all[i.to_i]
+    Question.find_by_number(i)
   end
 end
