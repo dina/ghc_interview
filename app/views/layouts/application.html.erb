@@ -23,7 +23,8 @@
         <% end %>
 
         <%= link_to_unless @question == Question.last, '>>', question_path(@question.number + 1) %>
-
+        &nbsp;
+        <%= link_to 'random', root_path %>
       <% end %>
     </div>
 
