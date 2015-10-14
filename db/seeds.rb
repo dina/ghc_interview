@@ -1,6 +1,6 @@
 name = "Palindrome"
 content = "Detect whether a string is a palindrome."
-test_cases = [["\"hello world\"", false], ["\"tacocat\"", true], ["\"racecar\"", true]], ["\"dood\"", true]]
+test_cases = [["\"hello world\"", false], ["\"tacocat\"", true], ["\"racecar\"", true], ["\"dood\"", true]]
 format = :bullet
 q = Question.create(name: name, content: content, test_cases: test_cases, format: format, number: 1)
 
