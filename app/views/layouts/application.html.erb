@@ -25,6 +25,12 @@
         <%= link_to_unless @question == Question.last, '>>', question_path(@question.number + 1) %>
         &nbsp;
         <%= link_to 'random', root_path %>
+        &nbsp;
+        <% if @solution %>
+          <b><u><%= link_to 'solution', question_solution_path(@question.number) %></u></b>
+        <% else %>
+          <%= link_to 'solution', question_solution_path(@question.number) %>
+        <% end %>
       <% end %>
     </div>
 

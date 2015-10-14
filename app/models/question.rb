@@ -1,5 +1,7 @@
 class Question < ActiveRecord::Base
 
+  has_one :solution
+
   serialize :test_cases, JSON
 
   def self.random

@@ -1,0 +1,5 @@
+<h2><%= @question.name %></h2>
+
+<h3>Solution:</h3>
+
+<p><%= raw(@solution.code.gsub("\n", "<br/>").gsub(/[\s]{2}/, "&nbsp;&nbsp;&nbsp;&nbsp;")) %></p>

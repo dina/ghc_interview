@@ -2,10 +2,8 @@ class QuestionsController < ApplicationController
 
   before_action :authenticate_admin!
 
-  def index
-    @questions = Question.all
-    @question = Question.random
-    render :show
+  def random
+    redirect_to action: :show, id: Question.random.number
   end
 
   def show

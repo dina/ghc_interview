@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'questions#index'
+  root 'questions#random'
 
-  resources :questions
+  resources :questions, only: :show do
+    get :random, to: :random
+    resource :solution, only: :show
+  end
 
   devise_for :admins
 
